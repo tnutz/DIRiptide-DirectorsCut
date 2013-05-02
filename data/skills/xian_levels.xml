@@ -5,7 +5,7 @@
 	<prop n="InventorySize" v="24"/>        //default 12
 	<prop n="MaxHealth" v="100"/>
 	<prop n="JumpStaminaCost" v="0.04"/>
-	<prop n="MoveSprintStaminaConsumption" v="0.033"/>
+	<prop n="MoveSprintStaminaConsumption" v="0.055"/>  //default 0.033. Original in default_levels.xml is 0.05 - upped to .08
 </level>
 <level id="2">
 	<prop n="ExpToNextLevel" v="2220"/>

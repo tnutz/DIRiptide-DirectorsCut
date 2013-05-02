@@ -209,9 +209,9 @@
     <prop n="MoveBackwardMinSpeed" v="10"/>
     <prop n="MoveBackwardMaxSpeed" v="250"/>
     <prop n="MoveStrafeMinSpeed" v="10"/>
-    <prop n="MoveStrafeMaxSpeed" v="250"/>
-    <prop n="MoveSprintSpeed" v="550"/>
-    <prop n="MoveSprintStaminaConsumption" v="0.05"/>
+    <prop n="MoveStrafeMaxSpeed" v="250"/>                 //default 250
+    <prop n="MoveSprintSpeed" v="650"/>                    //default 550
+    <prop n="MoveSprintStaminaConsumption" v="0.08"/>       //default 0.05
     <prop n="MoveAcceleration" v="700"/>
     <prop n="MoveDeceleration" v="1000"/>
     
