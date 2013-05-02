@@ -1,6 +1,6 @@
 <level id="1">	
 	<prop n="ExpToNextLevel" v="2000"/>
-	<prop n="MaxStamina" v="0.8"/>
+	<prop n="MaxStamina" v="0.7"/>  //default 0.8
 	<prop n="QuickSlotsCount" v="4"/>
 	<prop n="InventorySize" v="24"/>    //default 12
 	<prop n="MaxHealth" v="110"/>

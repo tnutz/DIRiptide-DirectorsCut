@@ -164,7 +164,7 @@
 
     <prop n="MaxStamina" v="1"/>
 	<prop n="StompStaminaUsage" v="0.3"/>
-    <prop n="StaminaRegeneration" v="0.3"/>
+    <prop n="StaminaRegeneration" v="0.40"/>         //default 0.3, lowered total stamina per character
 	
 	<prop n="GentlePushAvailable" v="0.0"/>
 	<prop n="RamingDamageLev1" v="30.0"/>

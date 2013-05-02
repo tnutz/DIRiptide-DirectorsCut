@@ -1,6 +1,6 @@
 <level id="1">	
 	<prop n="ExpToNextLevel" v="2000"/>
-	<prop n="MaxStamina" v="0.80"/>
+	<prop n="MaxStamina" v="0.70"/>   //default 0.80
 	<prop n="InventorySize" v="24"/>   //default 12
 	<prop n="MaxHealth" v="110"/>
 	<prop n="FuryPointsRegain" v="1.0"/>
