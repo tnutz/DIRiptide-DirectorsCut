@@ -501,24 +501,24 @@ sub main()
         Description("&Melee_Leg_D&");        
         ItemType(ItemType_Stick);        
         Condition(0);
-        Damage(10.0);
-        CriticalProb(0.05);
-        CriticalDamage(40.0);
-        DamageRange(190.0);
-        Force(30.0);
-        PhysicsDamage(50.0);
-        StaminaUsage(0.1);       
-        HeadSmashProb(0.0);
+        Damage(10.0);                //default 10.0, has to be high enough to trigger animations
+        CriticalProb(0.1);           //default 0.05
+        CriticalDamage(40.0);        //default 40.0
+        DamageRange(190.0);         //default 190, which is ridiculously long range but makes it easier to get a high arc, was 140 in 3.2, but latency can be an issue in co-op with shorter range, and you can't do as much fun stuff
+        Force(45.0);              //default 30.0
+        PhysicsDamage(150.0);      //default 50.0  //seems to only take effect on jump-kicking and on downed enemies, 999.0 gets crazy
+        StaminaUsage(0.0);      //default 0.1. Kicking is your only defense when out of stamina
+        HeadSmashProb(0.0);      //didn't seem to have much effect in original DI
         HeadCutProb(0.0);
         ArmsCutProb(0.0);
         LegsCutProb(0.0);
 		AiHitSound("leg");
-        DamageType(DamageType_Kick);                
+        DamageType(DamageType_Kick);  //default DamageType_Kick - Kicks don't seem to hit the head, I want them to, tried Blunt in original DI to no avail
         Reparable(false); 
         MinDamageAngle(-30.0);
         MaxDamageAngle(30.0);		
-		MaxHitSeverity(HitSeverity_Heavy);
-		MinHitSeverity(HitSeverity_Heavy);		
+		MaxHitSeverity(HitSeverity_Heavy);  //default HitSeverity_Heavy // this has to do with the severity thresholds in the _data.scrs
+		MinHitSeverity(HitSeverity_Light);  //default HitSeverity_Heavy - Light triggers a subtler animation with less knockback
     }
 	
 	Item("ATEST_Machete", CategoryType_Melee)
