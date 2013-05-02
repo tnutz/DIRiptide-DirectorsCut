@@ -1,0 +1,201 @@
+<character_req value="john_levels.xml">
+    <postfix id="John">
+        <skill id="FuryGain" cat="Tree1" skill_id="206" max_level="3" tier="1" desc_params="+5%;+10%;+15%">
+            <tier_req tier="0" cat="Tree1" value="1"/>
+            <effect id="FuryGainMul" change="0.05"/>
+        </skill>
+        <skill id="FuryRecycle" cat="Tree1" skill_id="207" max_level="3" tier="3" desc_params="+10%;+20%;+30%">
+            <tier_req tier="2" cat="Tree1" value="1"/>
+            <effect id="FuryRecyclePercentage" change="0.1"/>
+        </skill>
+        <skill id="TouchOfDeath1" cat="Tree1" skill_id="208" max_level="1" tier="0">
+            <effect id="FuryLevel" change="1"/>
+            <effect id="FuryUsage" change="0.17"/>
+            <effect id="FuryRange" change="1000"/>
+        </skill>
+        <skill id="TouchOfDeath2" cat="Tree1" skill_id="209" max_level="1" tier="2">
+            <tier_req tier="1" cat="Tree1" value="3"/>
+            <effect id="FuryLevel" change="1"/>
+            <effect id="FuryUsage" change="0"/>
+        </skill>
+        <skill id="TouchOfDeath3" cat="Tree1" skill_id="210" max_level="1" tier="5">
+            <tier_req tier="4" cat="Tree1" value="1"/>
+            <effect id="FuryLevel" change="1"/>
+            <effect id="FuryUsage" change="-0.09"/>
+        </skill>
+        <skill id="FuryHeal" cat="Tree1" skill_id="256" max_level="1" tier="4">
+            <tier_req tier="3" cat="Tree1" value="3"/>
+            <effect id="AddHealthOnFuryEnd" change="999999"/>
+        </skill>
+        <skill id="FuryFistsRage" cat="Tree1" skill_id="257" max_level="3" tier="1" desc_params="+10%;+20%;+30%">
+            <tier_req tier="0" cat="Tree1" value="1"/>
+            <effect id="FuryPointsAfterFistsKillMul" change="0.1"/>
+        </skill>
+        <skill id="FuryAoE" cat="Tree1" skill_id="258" max_level="3" tier="3" desc_params="+33%;+66%;+100%">
+            <tier_req tier="2" cat="Tree1" value="1"/>
+            <effect id="FuryAoE" change="0.33"/>
+        </skill>
+        <skill id="BREnragedSpeed" cat="Tree1" skill_id="211" max_level="3" tier="1" desc_params="+33%;+66%;+99%">
+            <tier_req tier="0" cat="Tree1" value="1"/>
+            <dyn_req req="fury"/>
+            <effect id="MoveSpeedsMul" change="0.33"/>
+        </skill>
+        <skill id="FuryXpMul" cat="Tree1" skill_id="212" max_level="3" tier="3" desc_params="+33%;+66%;+99%">
+            <tier_req tier="2" cat="Tree1" value="1"/>
+            <effect id="FuryXpGainMul" change="0.33"/>
+        </skill>
+        <skill id="BSFuryKOResistance" cat="Tree1" skill_id="213" max_level="1" tier="4">
+            <tier_req tier="3" cat="Tree1" value="3"/>
+            <effect id="BSFuryKnockDownResistance" change="1.0"/>
+        </skill>
+        <skill id="BSGroupFuryJohn" cat="Tree1" skill_id="251" max_level="3" tier="1">
+            <tier_req tier="0" cat="Tree1" value="1"/>
+            <effect id="GroupFuryLevel" change="1"/>
+        </skill>
+        <skill id="ComboDamageIncrease" cat="Tree2" skill_id="214" max_level="3" tier="2" desc_params="+10%;+20%;+30%">
+            <tier_req tier="1" cat="Tree2" value="3"/>
+            <effect id="ComboDamageMul" change="0.1"/>
+        </skill>
+        <skill id="ComboCriticalProb" cat="Tree2" skill_id="215" max_level="3" tier="4" desc_params="+4%;+8%;+12%">
+            <tier_req tier="3" cat="Tree2" value="1"/>
+            <effect id="ComboCriticalProbBonus" change="0.04"/>
+        </skill>
+        <skill id="JohnMastery1" cat="Tree2" skill_id="216" max_level="1" tier="0" desc_params="10%">
+            <effect id="PalmStrike" change="1"/>
+            <effect id="HandToHandDamageMod" change="0.05"/>
+            <effect id="FistsCriticalChance" change="0.01"/>
+            <effect id="MeeleFistStaminaUsageMul" change="-0.05"/>
+            <effect id="FistsForceMul" change="0.05"/>
+        </skill>
+        <skill id="BSHtHStaminaDec" cat="Tree2" skill_id="217" max_level="3" tier="1" desc_params="-15%;-30%;-45%">
+            <tier_req tier="0" cat="Tree2" value="1"/>
+            <effect id="MeeleFistStaminaUsageMul" change="-0.15"/>
+        </skill>
+        <skill id="BSHtHWeaponDurInc" cat="Tree2" skill_id="218" max_level="3" tier="1" desc_params="+10%;+20%;+30%">
+            <tier_req tier="0" cat="Tree2" value="1"/>
+            <effect id="FistsWpnDurabilityLoss" change="-0.1"/>
+        </skill>
+        <skill id="BSHealOnHit" cat="Tree2" skill_id="219" max_level="3" tier="1" desc_params="1%;2%;3%">
+            <tier_req tier="0" cat="Tree2" value="1"/>
+            <effect id="BSHealOnHitChance" change="0.01"/>
+        </skill>
+        <skill id="UnarmedImpactChance" cat="Tree2" skill_id="220" max_level="3" tier="2" desc_params="5%;10%;15%">
+            <tier_req tier="1" cat="Tree2" value="3"/>
+            <effect id="FistsCriticalChance" change="0.05"/>
+            <effect id="DefensiveCriticalChance" change="0.05"/>
+            <effect id="UnarmedImpactChance" change="1"/>
+        </skill>
+        <skill id="JohnMastery2" cat="Tree2" skill_id="221" max_level="1" tier="3">
+            <tier_req tier="2" cat="Tree2" value="3"/>
+            <effect id="FlyingKick" change="1"/>
+            <effect id="HandToHandDamageMod" change="0.05"/>
+            <effect id="FistsCriticalChance" change="0.02"/>
+            <effect id="MeeleFistStaminaUsageMul" change="-0.05"/>
+            <effect id="FistsForceMul" change="0.1"/>
+            <effect id="StomperSkillLevel" change="1"/>
+        </skill>
+        <skill id="DodgeIncreaseCritical" cat="Tree2" skill_id="222" max_level="3" tier="5" desc_params="15%;30%;45%">
+            <tier_req tier="4" cat="Tree2" value="3"/>
+            <effect id="DodgeCriticalChance" change="0.15"/>
+        </skill>
+        <skill id="JohnMastery3" cat="Tree2" skill_id="223" max_level="1" tier="6">
+            <tier_req tier="5" cat="Tree2" value="3"/>
+            <effect id="KissOfTheDragon" change="1"/>
+            <effect id="HandToHandDamageMod" change="0.05"/>
+            <effect id="FistsCriticalChance" change="0.03"/>
+            <effect id="MeeleFistStaminaUsageMul" change="-0.05"/>
+            <effect id="FistsForceMul" change="0.15"/>
+            <effect id="JohnMasteryHeadInstantKillChance" change="0.02"/>
+            <effect id="StomperSkillLevel" change="1"/>
+        </skill>
+        <skill id="HandToHandDamage" cat="Tree2" skill_id="224" max_level="3" tier="2" desc_params="+5%;+10%;+15%">
+            <tier_req tier="1" cat="Tree2" value="3"/>
+            <effect id="HandToHandDamageMod" change="0.05"/>
+        </skill>
+        <skill id="HandToHandCriticalChance" cat="Tree2" skill_id="225" max_level="3" tier="5" desc_params="+2%;+4%;+6%">
+            <tier_req tier="4" cat="Tree2" value="3"/>
+            <effect id="HandToHandCriticalChance" change="0.02"/>
+        </skill>
+        <skill id="BSCharge" cat="Tree2" skill_id="226" max_level="3" tier="2" desc_params="0;+25%;+25%">
+            <tier_req tier="1" cat="Tree2" value="3"/>
+            <effect id="BSChargeUsage" change="1.0"/>
+            <effect id="BSChargeForce" change="0.25"/>
+            <effect id="BSChargeDamage" change="0.25"/>
+            <effect id="BSChargeStaminaCost" change="-0.15"/>
+        </skill>
+        <skill id="BSJohnSpecialAttack" cat="Tree2" skill_id="227" max_level="1" tier="4">
+            <tier_req tier="3" cat="Tree2" value="1"/>
+            <effect id="BSJohnSpecialAttackUsage" change="1.0"/>
+        </skill>
+        <skill id="BSJohnSpecialAttackUp" cat="Tree2" skill_id="228" max_level="3" tier="5" desc_params="-15%;-30%;-45%">
+            <tier_req tier="4" cat="Tree2" value="3"/>
+            <effect id="BSJohnSpecialAttackStaminaDec" change="-0.15"/>
+        </skill>
+        <skill id="KickUpgrade" cat="Tree2" skill_id="229" max_level="3" tier="4" desc_params="+25%;+50%;+75%">
+            <tier_req tier="3" cat="Tree2" value="1"/>
+            <effect id="KickDamageMul" change="0.25"/>
+        </skill>
+        <skill id="ExtraHealthAndStamina1" cat="Tree3" skill_id="232" max_level="1" tier="0" desc_params="10%">
+            <effect id="MaxHealth" change="10"/>
+            <effect id="MaxStamina" change="0.1"/>
+        </skill>
+        <skill id="OneHandedDurability" cat="Tree3" skill_id="230" max_level="3" tier="1" desc_params="+10%;+20%;+30%">
+            <tier_req tier="0" cat="Tree3" value="1"/>
+            <effect id="OneHandedDurabilityMulReduce" change="0.1"/>
+        </skill>
+        <skill id="DeeperPockets" cat="Tree3" skill_id="235" max_level="3" tier="1" desc_params="2;4;6">
+            <tier_req tier="0" cat="Tree3" value="1"/>
+            <effect id="InventorySize" change="2"/>
+        </skill>
+        <skill id="BSStandUpSpeed" cat="Tree3" skill_id="237" max_level="1" tier="1">
+            <tier_req tier="0" cat="Tree3" value="1"/>
+            <effect id="BSFastStandupMul" change="-0.5"/>
+        </skill>
+        <skill id="JumpingStaminaCost" cat="Tree3" skill_id="262" max_level="1" tier="4">
+            <tier_req tier="3" cat="Tree3" value="3"/>
+            <effect id="JumpingStaminaCost" change="-0.60"/> 
+        </skill>
+        <skill id="ExtraHealthAndStamina2" cat="Tree3" skill_id="233" max_level="1" tier="2" desc_params="10%">
+            <tier_req tier="1" cat="Tree3" value="3"/>
+            <effect id="MaxHealth" change="10"/>
+            <effect id="MaxStamina" change="0.1"/>
+        </skill>
+        <skill id="CheeperReapair" cat="Tree3" skill_id="259" max_level="3" tier="3" desc_params="-10%;-20%;-30%">
+            <tier_req tier="2" cat="Tree3" value="1"/>
+            <effect id="WeaponRepairPriceFactor" change="-0.1"/>
+        </skill>
+        <skill id="LevelUpWeaponSkillsFaster" cat="Tree3" skill_id="260" max_level="3" tier="3" desc_params="+10%;+20%;+30%">
+            <tier_req tier="2" cat="Tree3" value="1"/>
+            <effect id="LevelUpWeaponSkillsFaster" change="0.1"/>
+        </skill>
+        <skill id="LesserPenalty" cat="Tree3" skill_id="261" max_level="3" tier="3" desc_params="-15%;-30%;-45%">
+            <tier_req tier="2" cat="Tree3" value="1"/>
+            <effect id="PenaltyOnDeath" change="-0.15"/>
+        </skill>
+        <skill id="ReduceBlastFireDamage" cat="Tree3" skill_id="264" max_level="3" tier="3" desc_params="-20%;-40%;-60%">
+            <tier_req tier="2" cat="Tree3" value="1"/>
+            <effect id="ReduceBlastFireDamage" change="-0.20"/>
+        </skill>
+        <skill id="RVMasterThief" cat="Tree3" skill_id="231" max_level="3" tier="1" desc_params="1;2;3">
+            <tier_req tier="0" cat="Tree3" value="1"/>
+            <effect id="LockpickLev" change="1"/>
+        </skill>
+        <skill id="DJCriticalRegen" cat="Tree3" skill_id="236" max_level="3" tier="4" desc_params="+5%;+10%;+15%">
+            <tier_req tier="3" cat="Tree3" value="3"/>
+            <effect id="RegainHealthAfterCritical" change="5"/>
+        </skill>
+        <skill id="MilitaryTraining" cat="Tree3" skill_id="265" max_level="3" tier="4" desc_params="+20%;+40%;+60%">
+            <tier_req tier="3" cat="Tree3" value="3"/>
+            <effect id="MilitaryTraining" change="-0.20"/>
+        </skill>
+        <skill id="RunningStaminaCost" cat="Tree3" skill_id="263" max_level="1" tier="4">
+            <tier_req tier="3" cat="Tree3" value="3"/>
+            <effect id="RunningStaminaCost" change="-0.60"/>
+        </skill>
+        <skill id="ExtraHealthAndStamina3" cat="Tree3" skill_id="234" max_level="1" tier="5" desc_params="10%">
+            <tier_req tier="4" cat="Tree3" value="3"/>
+            <effect id="MaxHealth" change="10"/>
+            <effect id="MaxStamina" change="0.1"/>
+        </skill>
+    </postfix>
+</character_req>

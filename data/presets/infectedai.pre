@@ -1,0 +1,51 @@
+import "InfectedAI_pre.def"
+
+sub main()
+{
+    PresetDef("Character")
+    {
+        Description("");
+
+        AddField("MeshName", "NoMesh.msh");
+        AddField("SkinName", "Default");
+        AddField("m_Seed", "");
+        AddField("m_MustHaveTags", "");
+        AddField("m_MustNotHaveTags", "");
+        AddField("m_ForcedBodyScaleMin", "1.00");
+        AddField("m_ForcedBodyScaleMax", "1.00");
+        AddField("m_SoundPreset", "");
+        AddField("m_AllowInitialArmsDamage", "1");
+        AddField("m_AllowInitialLegsDamage", "0");
+        AddField("m_BoneDamageProbability", "0.25");
+        AddField("m_CanCharge", "0");
+		AddField("m_ConflictSide", CONFLICT_SIDE_COUNTER_ALL);
+        AddField("m_CrippleBonesEnable", "1");
+        AddField("m_DialogSpeakerName", "");
+        AddField("m_HasBulletproofVest", "0");
+        AddField("m_CustomDataPresetID", "-1");
+        AddField("m_ForceBerserkerGrab", "0");
+        AddField("m_Gender", "0");
+        AddField("m_GrabEnabled", "1");
+        AddField("m_Immortal", "0");
+        AddField("m_ImmunitiesNames", "");
+        AddField("m_InitAnimation", "mzi_upset_stand_idle01");
+        AddField("m_InitialDamage", "0.25");
+        AddField("m_NeverHolsterWeapon", "1");
+        AddField("m_PrimaryWeaponName", "");
+        AddField("m_PrimaryWeaponProbability", "0.5");
+		AddField("m_SecondaryWeaponName", "");
+        AddField("m_StepPreset", "Zombie");
+        AddField("m_CanUseAttractors", "1");
+        AddField("m_DamageInfluencesNames", "");
+        AddField("m_BurnOnStart", "0");
+        AddField("m_PoisonedOnStart", "0");
+        AddField("m_SpecialEffectEnabled", "");
+        AddField("m_MaxLevelDiff", "1");
+        AddField("m_MinLevelDiff", "-100");
+        AddField("m_Boss", "0");
+        AddField("m_Items", "");
+        AddField("m_ItemColor", White);
+
+        use declare_infected_ai_presets();
+    }
+}

@@ -1,0 +1,238 @@
+export int DeadBody = 1;
+export int Wardrobe = 2;
+export int Safe = 3;
+export int ToolBox = 4;
+export int Bag = 5;
+export int CashDesk = 6;
+export int MetalWardrobe = 7;
+export int ToolboxWardrobe = 8;
+export int Bonnet = 9;
+export int Electronics = 10;
+export int Trash = 11;
+export int Seaweeds = 12;
+export int Flowers = 13;
+export int Refrigerator = 14;
+export int ToolBoxFirearms = 15;
+export int AmmoBox = 16;
+export int Special = 17;
+export int MagicBox = 18;
+export int DeadBody_FatMan = 19;
+export int DeadBody_Ram = 20;
+export int DeadBody_Suicider = 21;
+export int DeadBody_Corrupter = 22;
+export int DeadBody_MeleeFighter = 23;
+export int DeadBody_Infected = 24;
+export int DeadBody_Human = 25;
+export int DeadBody_Grenadier = 26;
+export int DeadBody_Screamer = 27;
+export int DeadBody_Wrestler = 28;
+
+export int MedKit = 1;
+export int Ammo = 2;
+export int Cash = 3;
+export int Weapon = 4;
+export int CraftPart = 3;
+
+export int LootType_None            = 0;
+export int LootType_Knuckles        = 1;
+export int LootType_Blunt           = 2;
+export int LootType_Sharp           = 3;
+export int LootType_Firearm_Short   = 4;
+export int LootType_Firearm_Long    = 5;
+export int LootType_Firearm_Auto    = 6;
+export int LootType_Throwable       = 7;
+export int LootType_Powerup         = 8;
+
+export int Color_White =  0;
+export int Color_Green =  1;
+export int Color_Blue =  2;
+export int Color_Violet =  3;
+export int Color_Orange =  4;
+
+export int ColorSet_Default = 0;
+export int ColorSet_LockPick1 = 1;
+export int ColorSet_LockPick2 = 2;
+export int ColorSet_LockPick3 = 3;
+export int ColorSet_FatMan = 4;
+export int ColorSet_Ram = 5;
+export int ColorSet_Suicider = 6;
+export int ColorSet_Corrupter = 7;
+export int ColorSet_MeleeFighter = 8;
+
+sub DefineColors()
+{
+    DefColorSet(ColorSet_Default)
+    {
+        ColorWeight(Color_White, 91.0);
+        ColorWeight(Color_Green, 7.0);
+        ColorWeight(Color_Blue, 2.0);
+        ColorWeight(Color_Violet, 0.0);
+        ColorWeight(Color_Orange, 0.0);
+    }
+    
+    DefColorSet(ColorSet_LockPick1)
+    {
+        ColorWeight(Color_White, 0.0);
+        ColorWeight(Color_Green, 92.0);
+        ColorWeight(Color_Blue, 6.0);
+        ColorWeight(Color_Violet, 1.0);
+        ColorWeight(Color_Orange, 0.0);
+    }
+    
+    DefColorSet(ColorSet_LockPick2)
+    {
+        ColorWeight(Color_White, 0.0);
+        ColorWeight(Color_Green, 85.0);
+        ColorWeight(Color_Blue, 11.0);
+        ColorWeight(Color_Violet, 3.0);
+        ColorWeight(Color_Orange, 1.0);
+    }
+    
+    DefColorSet(ColorSet_LockPick3)
+    {
+        ColorWeight(Color_White, 0.0);
+        ColorWeight(Color_Green, 72.0);
+        ColorWeight(Color_Blue, 21.0);
+        ColorWeight(Color_Violet, 5.0);
+        ColorWeight(Color_Orange, 2.0);
+    }
+
+    DefColorSet(ColorSet_FatMan)
+    {
+        ColorWeight(Color_Green, 80.0);
+        ColorWeight(Color_Blue, 18.5);
+        ColorWeight(Color_Violet, 1.5);
+        ColorWeight(Color_Orange, 0.0);
+    }
+
+    DefColorSet(ColorSet_Ram)
+    {
+        ColorWeight(Color_White, 0.0);
+        ColorWeight(Color_Green, 10.0);
+        ColorWeight(Color_Blue, 67.0);
+        ColorWeight(Color_Violet, 20.0);
+        ColorWeight(Color_Orange, 3.0);
+    }
+
+    DefColorSet(ColorSet_Suicider)
+    {
+        ColorWeight(Color_White, 70.0);
+        ColorWeight(Color_Green, 25.0);
+        ColorWeight(Color_Blue, 5.0);
+        ColorWeight(Color_Violet, 0.0);
+        ColorWeight(Color_Orange, 0.0);
+    }
+
+    DefColorSet(ColorSet_Corrupter)
+    {
+        ColorWeight(Color_White, 0.0);
+        ColorWeight(Color_Green, 70.0);
+        ColorWeight(Color_Blue, 30.0);
+        ColorWeight(Color_Violet, 0.0);
+        ColorWeight(Color_Orange, 0.0);
+    }
+
+    DefColorSet(ColorSet_MeleeFighter)
+    {
+        ColorWeight(Color_White, 0.0);
+        ColorWeight(Color_Green, 65.0);
+        ColorWeight(Color_Blue, 35.0);
+        ColorWeight(Color_Violet, 0.0);
+        ColorWeight(Color_Orange, 0.0);
+    }
+}
+
+sub StandardMedKits(float weight = 1.0, float prob = 1.0)
+{
+    Set(MedKit, weight, prob)
+    {
+        //Item("Medkit_HealthPackLarge", 1.0);
+        Item("Medkit_HealthPackMedium", 5.0);
+        Item("Medkit_HealthPackSmall", 1.0);
+    }
+}
+
+sub StandardAmmo(float weight = 1.0, float prob = 1.0)
+{
+    Set(Ammo, weight, prob)
+    {
+        Item("Ammo_PistolSmall", 1.0);
+        Item("Ammo_PistolBig", 1.0);
+        Item("Ammo_ShotgunSmall", 1.0);
+        Item("Ammo_ShotgunBig", 1.0);
+        Item("Ammo_RifleSmall", 1.0);
+        Item("Ammo_RifleBig", 1.0);
+    }
+}
+
+sub StandardCash(float weight = 1.0, float prob = 1.0)
+{
+    Set(Cash, weight, prob)
+    {
+        ItemCount("Cash_Wallet", 2, 10, 20.0);
+        ItemCount("Cash_Wallet", 25, 45, 1.0);
+        ItemCount("Cash_Cash", 4, 20, 5.0);
+    }
+}
+
+sub MediumCash(float weight = 1.0, float prob = 1.0)
+{
+    Set(Cash, weight, prob)
+    {
+        ItemCount("Cash_Cash", 65, 135, 1.0);
+    }
+}
+
+
+sub BigCash(float weight = 1.0, float prob = 1.0)
+{
+    Set(Cash, weight, prob)
+    {
+        ItemCount("Cash_Cash", 155, 255, 1.0);
+    }
+}
+
+sub default()
+{
+    use DefineColors();
+
+    LootedObject(DeadBody, 0.2)
+    {
+        use StandardMedKits(weigh = 7.0, prob = 0.9);
+        use StandardAmmo(weight = 7.0, prob = 0.9);
+        use StandardCash(weight = 5.0, prob = 0.9);
+    }
+
+    LootedObject(Wardrobe, 0.5)
+    {
+        use StandardMedKits(weigh = 10.0, prob = 0.9);
+        use StandardAmmo(weight = 8.0, prob = 0.9);
+        use StandardCash(weight = 1.0, prob = 0.9);
+    }
+
+    LootedObject(Safe, 0.5)
+    {
+        use StandardMedKits(weigh = 2.0, prob = 0.9);
+        use StandardAmmo(weight = 5.0, prob = 0.9);
+        use StandardCash(weight = 10.0, prob = 0.9);
+    }
+    
+    LootedObject(ToolBox, 0.5)
+    {
+        use StandardMedKits(weigh = 7.0, prob = 0.9);
+        use StandardAmmo(weight = 7.0, prob = 0.9);
+        use StandardCash(weight = 10.0, prob = 0.9);
+    }
+
+    LootedObject(Bag, 0.5)
+    {
+        use StandardMedKits(weigh = 7.0, prob = 0.9);
+        use StandardAmmo(weight = 4.0, prob = 0.9);
+        use StandardCash(weight = 10.0, prob = 0.9);
+    }
+
+    LootedObject(CashDesk, 0.5)
+    {
+        use BigCash(weight = 1.0, prob = 0.1);
+    }
+}
