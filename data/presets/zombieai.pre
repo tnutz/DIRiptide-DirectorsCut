@@ -39,7 +39,7 @@ sub main()
         AddField("m_ShowFlies", "1");
         AddField("m_StepPreset", "Zombie");
         AddField("m_UseDistancedStinger", "0");
-        AddField("m_DamageInfluencesNames", "");
+        AddField("m_DamageInfluencesNames", "bullet:8.0");      //default ""  //6.0 is pretty good, but not against helmeted
         AddField("m_MaxLevelDiff", "100");
         AddField("m_MinLevelDiff", "-5");
         //AddField("m_ForcedBodyHealth", "-1");

@@ -36,7 +36,7 @@ sub main()
 		AddField("m_SecondaryWeaponName", "");
         AddField("m_StepPreset", "Zombie");
         AddField("m_CanUseAttractors", "1");
-        AddField("m_DamageInfluencesNames", "");
+        AddField("m_DamageInfluencesNames", "bullet:6.0");  //default ""
         AddField("m_BurnOnStart", "0");
         AddField("m_PoisonedOnStart", "0");
         AddField("m_SpecialEffectEnabled", "");
