@@ -248,7 +248,7 @@
     <prop n="SwimAcceleration" v="100"/>
     <prop n="SwimDeceleration" v="100"/>
 	
-	<prop n="JumpStaminaCost" v="0.06"/>
+	<prop n="JumpStaminaCost" v="0.12"/>        //default 0.06, overridden in xian_levels.xml
     <prop n="JumpMaxHeight" v="85"/>
 	<prop n="JumpMinHeight" v="85"/>
 	
