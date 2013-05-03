@@ -256,7 +256,7 @@
 	<prop n="AllowedSkillsCount" v="0"/>
 	
 	<prop n="GrappleEscapeMul" v="2"/>	
-	<prop n="EnemyGrabChance" v="1"/>	
+	<prop n="EnemyGrabChance" v="0.5"/>	            //default 1 This is how often enemies grab. Reduced because the grab mechanic isn't very fun
 	
 	<prop n="MaxAmmoPistol" v="50"/>
 	<prop n="MaxAmmoRifle" v="60"/>``
