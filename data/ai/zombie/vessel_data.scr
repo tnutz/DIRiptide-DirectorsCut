@@ -112,7 +112,7 @@ Data("hit_reaction:standing:pain::all::legs:backward:medium", -2, "mz_upset_stan
 Data("hit_reaction:standing:pain::all::legs:backward:medium", -2, "mz_upset_stand_hitreaction_legs_right_medium_v02")
 
 //(medium severity is set to 1%, and heavies come in at 25%)
-///added this so a medium kick/hit to the front might also trigger a heavy
+///added this so a medium kick/hit to the front might also trigger a heavy 
 //extra mediums to get the proportion right and vary it a bit, plus the original
 Data("hit_reaction:standing:pain::all::torso:backward:medium", -2, "mz_upset_stand_hitreaction_head_down_medium_v04") // moved from above
 Data("hit_reaction:standing:pain::all::torso:backward:medium", -2, "mz_upset_stand_hitreaction_head_down_medium_v04")
@@ -857,8 +857,8 @@ ParamFloat("min_jump_on_height", 0.0)
 ParamFloat("max_jump_on_height", 0.0)
 ParamFloat("max_jump_over_dist", 0.0)
 ParamFloat("min_jump_down_height", 0.0)
-ParamFloat("hit_legs_stamina_mul", 1.5)
-ParamFloat("stamina_regeneration_rate", 0.05)
+ParamFloat("hit_legs_stamina_mul", 4.5)            //default 1.5
+ParamFloat("stamina_regeneration_rate", 0.1)     //default 0.05
 ParamFloat("berserker_fall_prob", 100.0)
 ParamFloat("berserker_dist", 650.0)     // max dist to start berserker while moving
 ParamFloat("berserker_min_dist", 350.0) // min dist to start berserker while moving
@@ -885,7 +885,7 @@ ParamFloat("time_btw_grab_berserkers", 0.0)                 // time between poss
 ParamFloat("time_btw_ram_berserkers", 2.0)                  // time between possible occurance of ram berserker attacks
 ParamFloat("knock_down_duration", 1.0)                     //default 3.0, 1.0 will make you hustle at least, and should make the SamB skill actually matter
 ParamFloat("body_destroyed_knock_down_duration", 7.0)
-ParamFloat("medium_severity_threshold", 1.0)               //default 50.0  //percentage of health that must be lost (overall, not in that swing) before the severity of animation will play
+ParamFloat("medium_severity_threshold", 1.0)               //default 50.0  //percentage of health that must be lost (overall, not in that swing) before the severity of animation will play 
 ParamFloat("heavy_severity_threshold", 25.0)                //default 80.0        //was 15.0
 ParamFloat("decapitation_prob", 90.0)
 ParamFloat("counter_attack_prob_mul", 1.0)
@@ -895,7 +895,7 @@ ParamFloat("counter_combo_prob_mul", 0.5)
 ParamFloat("counterattack_dist", 180.0)
 ParamFloat("counterattack_angle", 30.0)
 ParamFloat("interior_sight_range", 600)
-ParamFloat("exterior_sight_range", 1000)
+ParamFloat("exterior_sight_range", 1000)                 //2000 in Director's Cut for DI, but levels are more sparse
 ParamFloat("burning_damage_per_second", 20) // 2 per 100 HP
 ParamFloat("time_to_extinguish", 30)
 ParamFloat("move_time_before_berserker", 0.2)
@@ -949,12 +949,12 @@ ParamFloat("max_dynamic_path_angle", 90.0)
 ParamFloat("max_collision_angle_to_stop", 0.8581)
 ParamFloat("ram_damage_mul", 0.0)
 ParamFloat("ram_physics_damage", 50.0)
-ParamFloat("bullet_head_hit_damage_mult", 1.0)
+ParamFloat("bullet_head_hit_damage_mult", 1000.0)          //changes don't seem to do anything in original DI
 ParamBool("unconscious_instead_of_killed", 0)
 ParamFloat("door_search_interval", 0.5)
 ParamBool("can_use_random_idle_activity_progress", 0)
 ParamBool("attack_enabled", 1)
-ParamFloat("fall_on_shot_prob", 0.0)
+ParamFloat("fall_on_shot_prob", 0.2)                         //default 0
 ParamFloat("taunt_prob", 0.0)
 ParamFloat("taunt_prob_on_target_change", 0.0)
 ParamFloat("random_taunt_prob", 0.0)
@@ -974,7 +974,7 @@ ParamFloat("special_move_disable_time", 3.0) // ai doesn't perform special movem
 ParamFloat("pro_player_head_health_influence", 3.75)  //don't think it does anything
 ParamFloat("head_health_influence", 4.0)          //default 1.25 Hits to the head apply much more damage, but still must upgrade weapons, related to overall health //down from 9.0 //4.0 with harder challenge settings usually requires a crit or fantastic weapon
 ParamFloat("left_arm_health_influence", 0.5)      //default 1.0  Hits to the arms apply this multiple of damage
-ParamFloat("right_arm_health_influence", 0.5)     //default 1.0
+ParamFloat("right_arm_health_influence", 0.5)     //default 1.0 
 ParamFloat("left_leg_health_influence", 0.1)       //default 1.0, but severing it is instakill
 ParamFloat("right_leg_health_influence", 0.1)      //default 1.0, but severing it is instakill
 ParamFloat("torso_front_health_influence", 0.05)    //default 1.0 nonzero to allow crits to trigger, and bullets if we want
@@ -998,15 +998,15 @@ ParamFloat("health_mul", 3.0)       //default 1.0  Overall health is higher, aim
 //Harder challenge mode
 ParamFloat("head_health_mul", 1.0)   //default 1.0   //change this for simplest change in overall challenge
 ParamFloat("arms_health_mul", 0.2) //default 0.3  Arms can be chopped off/broken easily  //was 0.1
-ParamFloat("legs_health_mul", 0.6)  //default 1.0  Legs are a better target than the body, connected with overall health
+ParamFloat("legs_health_mul", 0.6)  //default 1.0  Legs are a better target than the body, connected with overall health 
 //  or
 //Original Easier mode
 //ParamFloat("head_health_mul", 0.4)   //default 1.0   //change this for simplest change in overall challenge
 //ParamFloat("arms_health_mul", 0.1) //default 0.3  Arms can be chopped off/broken easily  //was 0.1
-//ParamFloat("legs_health_mul", 0.4)  //default 1.0  Legs are a better target than the body, connected with overall health
+//ParamFloat("legs_health_mul", 0.4)  //default 1.0  Legs are a better target than the body, connected with overall health 
 //
 ParamFloat("stamina_mul", 3.0)      //default 1.0, keep it on par with the health mul? (was 3.0)
-ParamFloat("stamina_to_health_ratio", 1.0)
+ParamFloat("stamina_to_health_ratio", 1.0) 
 ParamFloat("damage_mul", 0.8)       //default 1.0  //reduced their damage to encourage more interesting risk-taking
 ParamFloat("experience_mul", 1.0)
 ParamFloat("assist_experience_mul", 1.0) //give helpers the same experience
