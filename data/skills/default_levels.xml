@@ -68,7 +68,7 @@
 	<prop n="BSJohnSpecialAttackUsage" v="0.0"/>
 	<prop n="BSJohnSpecialAttackStaminaDec" v="1.0"/>
 	
-	<prop n="FinisherMult" v="4.0"/>
+	<prop n="FinisherMult" v="4.0"/>                  //default 4.0 not sure what this applies to, not the stomp it seems
 	<prop n="FinisherStaminaUsageMult" v="2.0"/>
 	<prop n="FuryUsage" v="0.0"/>
 	<prop n="FuryPointsAfterKill" v="0.05"/>
@@ -156,7 +156,7 @@
 	<prop n="InjectorDurationBonus" v="0"/>
 	
 	<prop n="QuickSlotsCount" v="6"/>
-	<prop n="InventorySize" v="12"/>
+	<prop n="InventorySize" v="12"/>           //default 12, but doesn't seem to work, have to do it in the character files
 	<prop n="MaxInventorySize" v="-1"/>
 	
 	<prop n="KillExperienceBonus" v="0"/>
@@ -256,12 +256,12 @@
 	<prop n="AllowedSkillsCount" v="0"/>
 	
 	<prop n="GrappleEscapeMul" v="2"/>	
-	<prop n="EnemyGrabChance" v="0.5"/>	            //default 1 This is how often enemies grab. Reduced because the grab mechanic isn't very fun
+	<prop n="EnemyGrabChance" v="0.5"/>	            //default 1 This is how often enemies grab. Reduced because the grab mechanic isn't very fun 
 	
 	<prop n="MaxAmmoPistol" v="75"/>   //def 50
 	<prop n="MaxAmmoRifle" v="120"/>`` //def 60
 	<prop n="MaxAmmoShotgun" v="30"/>  //def 20
-	<prop n="MaxAmmoSniper" v="25"/>   //def 15
+	<prop n="MaxAmmoSniper" v="25"/>   //def 15	
 		
 	<prop n="FirearmsPistolReloadTimeMul" v="1.0"/>	
 	<prop n="FirearmsRevolverReloadTimeMul" v="1.0"/>	
