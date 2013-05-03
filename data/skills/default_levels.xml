@@ -72,7 +72,7 @@
 	<prop n="FinisherStaminaUsageMult" v="2.0"/>
 	<prop n="FuryUsage" v="0.0"/>
 	<prop n="FuryPointsAfterKill" v="0.05"/>
-    <prop n="CameraDefaultFOV" v="62.5"/>
+    <prop n="CameraDefaultFOV" v="80"/>            //default 62.5
 	<prop n="BulletHitMissEffects" v="1.0"/>
     <prop n="HideWeaponsDuringSprint" v="1.0"/>
     <prop n="SelfHealing" v="1.0"/>
