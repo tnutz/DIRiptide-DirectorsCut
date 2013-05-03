@@ -4,9 +4,9 @@
 	<prop n="QuickSlotsCount" v="4"/>
 	<prop n="InventorySize" v="24"/>    //default 12
 	<prop n="MaxHealth" v="110"/>
-	<prop n="MaxAmmoPistol" v="75"/>
-	<prop n="MaxAmmoRifle" v="90"/>
-	<prop n="MaxAmmoShotgun" v="30"/>
+	<prop n="MaxAmmoPistol" v="90"/>  //other characters bumped in default_levels.xml to 75
+	<prop n="MaxAmmoRifle" v="150"/>  //90
+	<prop n="MaxAmmoShotgun" v="40"/>  //30
 </level>
 <level id="2">
 	<prop n="ExpToNextLevel" v="2220"/>
