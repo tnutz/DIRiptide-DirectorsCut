@@ -580,8 +580,8 @@ ParamFloat("time_btw_grab_berserkers", 5.0)                 // time between poss
 ParamFloat("time_btw_ram_berserkers", 0.0)                  // time between possible occurance of ram berserker attacks
 ParamFloat("knock_down_duration", 3.0)
 ParamFloat("body_destroyed_knock_down_duration", 7.0)
-ParamFloat("medium_severity_threshold", 50.0)
-ParamFloat("heavy_severity_threshold", 80.0)
+ParamFloat("medium_severity_threshold", 20.0)              //default 50.0
+ParamFloat("heavy_severity_threshold", 50.0)               //default 80.0
 ParamFloat("decapitation_prob", 20.0)
 ParamFloat("counter_attack_prob_mul", 0.0)
 ParamFloat("counter_attack_from_stand_prob_mul", 0.0)
