@@ -883,10 +883,10 @@ ParamFloat("max_dist_to_grab_passenger_on_boat", 0.0)
 ParamFloat("time_btw_hit_berserkers", 0.0)                  // time between possible occurance of hit berserker attacks
 ParamFloat("time_btw_grab_berserkers", 0.0)                 // time between possible occurance of catch berserker attacks
 ParamFloat("time_btw_ram_berserkers", 2.0)                  // time between possible occurance of ram berserker attacks
-ParamFloat("knock_down_duration", 3.0)
+ParamFloat("knock_down_duration", 1.0)                     //default 3.0, 1.0 will make you hustle at least, and should make the SamB skill actually matter
 ParamFloat("body_destroyed_knock_down_duration", 7.0)
-ParamFloat("medium_severity_threshold", 50.0)
-ParamFloat("heavy_severity_threshold", 80.0)
+ParamFloat("medium_severity_threshold", 1.0)               //default 50.0  //percentage of health that must be lost (overall, not in that swing) before the severity of animation will play
+ParamFloat("heavy_severity_threshold", 25.0)                //default 80.0        //was 15.0
 ParamFloat("decapitation_prob", 90.0)
 ParamFloat("counter_attack_prob_mul", 1.0)
 ParamFloat("counter_attack_from_stand_prob_mul", 1.0)
