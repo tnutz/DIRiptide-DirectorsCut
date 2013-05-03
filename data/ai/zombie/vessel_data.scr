@@ -1009,8 +1009,8 @@ ParamFloat("stamina_mul", 3.0)      //default 1.0, keep it on par with the healt
 ParamFloat("stamina_to_health_ratio", 1.0)
 ParamFloat("damage_mul", 0.8)       //default 1.0  //reduced their damage to encourage more interesting risk-taking
 ParamFloat("experience_mul", 1.0)
-ParamFloat("assist_experience_mul", 0.5)
-ParamFloat("nearby_experience_mul", 0.1)
+ParamFloat("assist_experience_mul", 1.0) //give helpers the same experience
+ParamFloat("nearby_experience_mul", 0.9)  //give nearby people most of it
 ParamFloat("bite_damage_mul", 1.0)
 ParamFloat("puke_damage_mul", 1.0)
 ParamFloat("spit_damage_mul", 1.0)
