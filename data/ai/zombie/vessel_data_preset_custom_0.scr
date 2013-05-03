@@ -170,9 +170,10 @@ ParamFloat("taunt_prob", 12.0)
 ParamFloat("taunt_prob_on_target_change", 12.0)
 ParamFloat("random_taunt_prob", 0.0)
 ParamInt("zombie_type", 1)
-ParamFloat("health_mul", 7.0)
+ParamFloat("health_mul", 9.0)                    //default 4.0, but walkers went up, so make it higher
+//ParamFloat("health_mul", 12.0)                    //default 4.0, but walkers went up, so make it higher - 12.0 too much?
 ParamFloat("stamina_mul", 20.0)
-ParamFloat("damage_mul", 1.8)
+ParamFloat("damage_mul", 2.5)                   //default 1.8, increased damage
 ParamFloat("physics_damage", 150.0)
 ParamFloat("experience_mul", 12.0)
 ParamInt("max_severity", 1)
@@ -185,6 +186,13 @@ ParamFloat("counter_combo_prob_mul", 0.0)
 ParamFloat("head_health_influence", 1.0)
 ParamBool("always_react_on_bullet", 0)
 ParamFloat("fall_on_normal_hit_prob", 0.0)
+//added for Director's Cut
+ParamFloat("head_health_mul", 15.0)
+ParamFloat("arms_health_mul", 0.05) //default 0.3  Arms can be chopped off easily
+//ParamFloat("legs_health_mul", 0.5)  //default 1.0  Legs are a better target than the body
+//ParamBool("limb_cut_by_direct_hit", 1)
+ParamFloat("arm_direct_hit_mul", 4.0)   //default 4.0, this helps with getting limbs cut off/smashed
+//End added for Director's Cut
 
 // resistance
 ParamBool("cannot_be_attacked_by_jump_down_attack", 1)
