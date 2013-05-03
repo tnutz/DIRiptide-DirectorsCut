@@ -971,16 +971,16 @@ ParamFloat("time_to_explode", 2.0)
 ParamFloat("regeneration_rate", 0.4) // part of health restored per second (only for those with enabled regeneration)
 ParamFloat("regeneration_probability", 0.0)
 ParamFloat("special_move_disable_time", 3.0) // ai doesn't perform special movement (like berserker) after electrocution
-ParamFloat("pro_player_head_health_influence", 1.0)
-ParamFloat("head_health_influence", 1.25)
-ParamFloat("left_arm_health_influence", 1.0)
-ParamFloat("right_arm_health_influence", 1.0)
-ParamFloat("left_leg_health_influence", 1.0)
-ParamFloat("right_leg_health_influence", 1.0)
-ParamFloat("torso_front_health_influence", 1.0)
-ParamFloat("torso_back_health_influence", 1.0)
+ParamFloat("pro_player_head_health_influence", 3.75)  //don't think it does anything
+ParamFloat("head_health_influence", 4.0)          //default 1.25 Hits to the head apply much more damage, but still must upgrade weapons, related to overall health //down from 9.0 //4.0 with harder challenge settings usually requires a crit or fantastic weapon
+ParamFloat("left_arm_health_influence", 0.5)      //default 1.0  Hits to the arms apply this multiple of damage
+ParamFloat("right_arm_health_influence", 0.5)     //default 1.0
+ParamFloat("left_leg_health_influence", 0.1)       //default 1.0, but severing it is instakill
+ParamFloat("right_leg_health_influence", 0.1)      //default 1.0, but severing it is instakill
+ParamFloat("torso_front_health_influence", 0.05)    //default 1.0 nonzero to allow crits to trigger, and bullets if we want
+ParamFloat("torso_back_health_influence", 0.05)     //default 1.0
 ParamFloat("leg_stamina_containment", 0.25)
-ParamFloat("arm_stamina_containment", 0.1)
+ParamFloat("arm_stamina_containment", 0.3)        //default 0.1  reduce their max stamina when missing arms
 ParamFloat("heel_height", 0.0)
 ParamBool("can_use_attractors", 1)
 ParamBool("can_attack_from_move", 0)
@@ -994,14 +994,20 @@ ParamBool("can_die_in_vehicle", 0)
 ParamBool("check_enemy_reachable", 1)
 ParamFloat("ellipsoid_size_mul", 1.0)
 ParamInt("max_level", 80)
-ParamFloat("health_mul", 1.0)
-ParamFloat("head_health_mul", 1.0)
-ParamFloat("arms_health_mul", 0.3)
-ParamFloat("legs_health_mul", 1.0)
-ParamFloat("stamina_mul", 1.0)
+ParamFloat("health_mul", 3.0)       //default 1.0  Overall health is higher, aim for the head //balanced around 2.0 - 4.0 (was 4.0 on co-op challenge mode)
+//Harder challenge mode
+ParamFloat("head_health_mul", 1.0)   //default 1.0   //change this for simplest change in overall challenge
+ParamFloat("arms_health_mul", 0.2) //default 0.3  Arms can be chopped off/broken easily  //was 0.1
+ParamFloat("legs_health_mul", 0.6)  //default 1.0  Legs are a better target than the body, connected with overall health
+//  or
+//Original Easier mode
+//ParamFloat("head_health_mul", 0.4)   //default 1.0   //change this for simplest change in overall challenge
+//ParamFloat("arms_health_mul", 0.1) //default 0.3  Arms can be chopped off/broken easily  //was 0.1
+//ParamFloat("legs_health_mul", 0.4)  //default 1.0  Legs are a better target than the body, connected with overall health
+//
+ParamFloat("stamina_mul", 3.0)      //default 1.0, keep it on par with the health mul? (was 3.0)
 ParamFloat("stamina_to_health_ratio", 1.0)
-ParamFloat("damage_mul", 1.0)
-ParamFloat("health_regeneration_on_damage_inflicting", 0.0)
+ParamFloat("damage_mul", 0.8)       //default 1.0  //reduced their damage to encourage more interesting risk-taking
 ParamFloat("experience_mul", 1.0)
 ParamFloat("assist_experience_mul", 0.5)
 ParamFloat("nearby_experience_mul", 0.1)
@@ -1050,7 +1056,7 @@ ParamInt("starting_sound_type", SOUND_TYPE_IDLE_CALM)
 ParamInt("move_sound_type", SOUND_TYPE_MOVE)
 ParamBool("can_only_grab", 0)
 ParamFloat("detect_enemy_delay", 2.5)
-ParamFloat("arm_direct_hit_mul", 4.0)
+ParamFloat("arm_direct_hit_mul", 5.0)   //default 4.0, this helps with getting limbs cut off //was 10.0
 ParamBool("apply_damage_in_cone", 1)
 ParamBool("force_counter_on_kick", 0)
 ParamBool("enable_collisions_with_other_ai", 1)
