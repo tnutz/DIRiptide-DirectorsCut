@@ -116,6 +116,7 @@
 	
     <prop n="BluntDamageMul" v="0"/>
     <prop n="BluntForceMul" v="0.1"/>        //default 0
+    <prop n="BluntWpnDurabilityLoss" v="0.2" />              //default 1.0  //need to check how it interacts with skills
     <prop n="BluntCriticalChance" v="0.05" />                   //default 0
     <prop n="BluntCriticalDmgMul" v="0"/>
 	<prop n="BluntCritSevereLimbProb" v="0.2"/>
@@ -124,6 +125,7 @@
 	
 	<prop n="CutDamageMul" v="0"/>
     <prop n="CutForceMul" v="0"/>
+    <prop n="CutWpnDurabilityLoss" v="0.2"/>                //default 1.0  //need to check how it interacts with skills
     <prop n="CutCriticalChance" v="0.05"/>                 //default 0
     <prop n="CutCriticalDmgMul" v="0"/>
 	<prop n="CutCritSevereLimbProb" v="0.2"/>
