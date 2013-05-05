@@ -6,8 +6,8 @@ Balanced for more intense and visceral combat - aim for the head. Much less pred
 Instructions
 -----------------
 - Download the zip (https://github.com/tnutz/DIRiptide-DirectorsCut/archive/master.zip)
-- Extract the data folder to My Documents\Riptide\
-- For example, you should have My Documents\Riptide\data\inventory_special.scr
+- Extract the data folder to My Documents\Riptide\out
+- For example, you should have My Documents\Riptide\out\data\inventory_special.scr
 
 Features
 -----------------
